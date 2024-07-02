@@ -86,7 +86,11 @@ alt=""
 
 {/* Appointment list */}
 
-<h1 className="text-[35px] text-center base font-semibold  underline mt-[30px]">Doctor Appointments</h1>
+{
+    cardData.length > 0 ? <h1 className="text-[35px] text-center base font-semibold  underline mt-[30px]">Doctor Appointments</h1> : ""
+}
+
+
 
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px] ml-[40px] md:ml-[50px]">
@@ -107,6 +111,8 @@ alt=""
   {/* <h1 className="text-[12px] flex gap-[8px] font-bold mt-[5px]"><span className="text-White  text-[22px]"><FaClock></FaClock></span> </h1> */}
 
   <h1 className="text-[20px] text-white font-semibold mt-[10px]"><span className="text-black font-bold">Time :</span> {data.start_time} - {data.end_time} </h1>
+
+  <button className="text-black bg-white py-[5px] rounded-[5px] font-bold mt-[5px] hover:bg-cyan-300">Book Appoinment</button>
   
    
   </div>
