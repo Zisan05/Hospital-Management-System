@@ -31,6 +31,28 @@ console.log(data);
 
     const [cardData,setCardData] = useState([]);
 
+useEffect(() => {
+    fetch(`https://bs2001.pythonanywhere.com/api/patient/recent-appointment-list/`,{
+      method:"GET",
+      credentials: "include",
+      headers: {
+          "content-type":"application/json",
+      },
+      
+  })
+  .then(res => res.json())
+  .then(data => {
+  
+   console.log(data);
+  setCardData(data);
+  
+    
+  })
+},[setCardData])
+
+
+  
+
    const handleCardData = (card_id) => {
 
     console.log(card_id);
@@ -86,9 +108,8 @@ alt=""
 
 {/* Appointment list */}
 
-{
-    cardData.length > 0 ? <h1 className="text-[35px] text-center base font-semibold  underline mt-[30px]">Doctor Appointments</h1> : ""
-}
+ <h1 className="text-[35px] text-center base font-semibold  underline mt-[30px]">Doctor Appointments</h1> 
+
 
 
 
