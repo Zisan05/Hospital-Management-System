@@ -60,7 +60,7 @@ console.log(data);
 
 
           {/* Dcotor list */}
-          <div className="  bgbase pb-[30px] mt-[50px]">
+          <div className="  bgbase pb-[30px] mt-[50px] ">
 
 <h1 className="text-[35px] text-center font-semibold text-white underline">Your Doctors</h1>
 
@@ -89,24 +89,30 @@ alt=""
 <h1 className="text-[35px] text-center base font-semibold  underline mt-[30px]">Doctor Appointments</h1>
 
 
-<div className="card card-compact  w-[300px] shadow-xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-300 mt-[20px]">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px] ml-[40px] md:ml-[50px]">
+{
+    cardData.map(data => (
+        <div className="card card-compact  w-[300px] shadow-xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-300 mt-[20px]">
   <figure>
     <img className=" p-[10px]"
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+      src={data.doctor_detail.picture}
       alt="Shoes" />
   </figure>
   <div className="card-body ">
-  <h1 className="text-[25px] text-white font-semibold"><span className="text-black font-bold">Dr: </span> zisanx islam </h1>
-  <h1 className="text-[20px] text-white font-semibold mt-[10px]"><span className="text-black font-bold">Date :</span> 2014-55-20</h1>
+  <h1 className="text-[25px] text-white font-semibold"><span className="text-black font-bold">Dr: </span> {data.doctor_detail.first_name} {data.doctor_detail.last_name} islam </h1>
+  <h1 className="text-[20px] text-white font-semibold mt-[10px]"><span className="text-black font-bold">Date :</span> {data.date}</h1>
 
-  <h1 className="text-[20px] text-white font-semibold mt-[10px]"><span className="text-black font-bold">Day :</span> sunday </h1>
+  <h1 className="text-[20px] text-white font-semibold mt-[10px]"><span className="text-black font-bold">Day :</span> {data.day}</h1>
 
   {/* <h1 className="text-[12px] flex gap-[8px] font-bold mt-[5px]"><span className="text-White  text-[22px]"><FaClock></FaClock></span> </h1> */}
 
-  <h1 className="text-[20px] text-white font-semibold mt-[10px]"><span className="text-black font-bold">Time :</span> 12.00pm - 5.00pm </h1>
+  <h1 className="text-[20px] text-white font-semibold mt-[10px]"><span className="text-black font-bold">Time :</span> {data.start_time} - {data.end_time} </h1>
   
    
   </div>
+</div>
+    ))
+}
 </div>
 
         </div>
