@@ -10,6 +10,7 @@ import Root from './Components/Root/Root';
 import Home from './Components/Home/Home';
 import SignUp from './Components/SignUP/SignUp';
 import Login from './Components/Login/Login';
+import UserProfile from './Components/UserProfile/UserProfile';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
  {
   path : "/login",
  element : <Login></Login>
+ },
+
+ {
+  path : "/profile",
+  element : <UserProfile></UserProfile>
  }
 
 

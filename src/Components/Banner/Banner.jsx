@@ -8,7 +8,7 @@ const Banner = () => {
 
 <p className="text-[20px] text-white font-semibold mt-[20px]">Health is the most important thing in human life. <br /> With a good health you can lead your life healthy and greate.</p>
 
-<Link to={"/login"}>
+<Link>
 <button className="bg-white text-[25px] px-[20px] py-[5px] font-bold rounded-[5px] mt-[40px] ">Join</button>
 </Link>
             </div>

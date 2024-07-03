@@ -18,7 +18,7 @@ const DoctorList = () => {
 .then(data => {
 
   
-console.log(data);
+
 
  setDocData(data);
 
@@ -43,7 +43,7 @@ useEffect(() => {
   .then(res => res.json())
   .then(data => {
   
-   console.log(data);
+
   setCardData(data);
   
     
@@ -55,7 +55,7 @@ useEffect(() => {
 
    const handleCardData = (card_id) => {
 
-    console.log(card_id);
+
     fetch(`https://bs2001.pythonanywhere.com/api/patient/appointment-list/?doctor_id=${card_id}`,{
       method:"GET",
       credentials: "include",
@@ -67,15 +67,13 @@ useEffect(() => {
   .then(res => res.json())
   .then(data => {
   
-      console.log(data);
+  
   setCardData(data);
   
     
   })
  
    }
-
-   console.log(cardData);
 
     return (
         <div>
