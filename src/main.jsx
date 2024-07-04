@@ -11,6 +11,11 @@ import Home from './Components/Home/Home';
 import SignUp from './Components/SignUP/SignUp';
 import Login from './Components/Login/Login';
 import UserProfile from './Components/UserProfile/UserProfile';
+import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
+import AppointmentPage from './Components/Appointment Page/AppointmentPage';
+import Admin from './Components/Admin/Admin';
+import AppointmentList from './Components/Admin/AppointmentList/AppointmentList';
+import CreateShedule from './Components/Admin/Create Doctor Shedule/CreateShedule';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +41,34 @@ const router = createBrowserRouter([
  {
   path : "/profile",
   element : <UserProfile></UserProfile>
+ },
+
+ {
+  path : "/update/:pathname/:_id",
+  element : <UpdateProfile></UpdateProfile>
+ },
+
+ {
+  path : "/booking/:_id",
+  element : <AppointmentPage></AppointmentPage>
+ },
+
+ {
+  path : "/admin",
+  element : <Admin></Admin>,
+  children : [
+
+    {
+      path : "/admin",
+      element : <AppointmentList></AppointmentList>
+    },
+
+    {
+      path : "/admin/shedule",
+      element : <CreateShedule></CreateShedule>
+    }
+
+  ]
  }
 
 

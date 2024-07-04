@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaClock } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const DoctorList = () => {
 
@@ -131,7 +132,9 @@ alt=""
 
   <h1 className="text-[20px] text-white font-semibold mt-[10px]"><span className="text-black font-bold">Time :</span> {data.start_time} - {data.end_time} </h1>
 
-  <button className="text-black bg-white py-[5px] rounded-[5px] font-bold mt-[5px] hover:bg-cyan-300">Book Appoinment</button>
+ <Link to={`/booking/${data.id}`}>
+ <button className="text-black bg-white px-[10px] py-[5px] rounded-[5px] font-bold mt-[5px] hover:bg-cyan-300">Book Appoinment</button>
+ </Link>
   
    
   </div>
