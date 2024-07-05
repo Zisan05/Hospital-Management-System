@@ -54,17 +54,17 @@ const router = createBrowserRouter([
  },
 
  {
-  path : "/admin",
+  path : "/doctor-side",
   element : <Admin></Admin>,
   children : [
 
     {
-      path : "/admin",
+      path : "/doctor-side",
       element : <AppointmentList></AppointmentList>
     },
 
     {
-      path : "/admin/shedule",
+      path : "/doctor-side/shedule",
       element : <CreateShedule></CreateShedule>
     }
 
