@@ -54,27 +54,26 @@ const router = createBrowserRouter([
   element : <Privat><AppointmentPage></AppointmentPage></Privat>
  },
 
- {
-  path : "/doctor-side",
-  element : <Admin></Admin>,
-  children : [
-
-    {
-      path : "/doctor-side",
-      element : <Privat><AppointmentList></AppointmentList></Privat>
-    },
-
-    {
-      path : "/doctor-side/shedule",
-      element : <Privat><CreateShedule></CreateShedule></Privat>
-    }
-
-  ]
- }
-
-
     ]
   },
+
+  {
+    path : "/doctor-side",
+    element : <Admin></Admin>,
+    children : [
+  
+      {
+        path : "/doctor-side",
+        element : <Privat><AppointmentList></AppointmentList></Privat>
+      },
+  
+      {
+        path : "/doctor-side/shedule",
+        element : <Privat><CreateShedule></CreateShedule></Privat>
+      }
+  
+    ]
+   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
