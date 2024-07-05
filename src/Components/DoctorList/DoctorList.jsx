@@ -85,7 +85,7 @@ useEffect(() => {
 
 <h1 className="text-[35px] text-center font-semibold text-white underline">Your Doctors</h1>
 
-<div className="flex overflow-x-auto gap-10 mt-[20px]">
+<div className="flex overflow-x-auto  gap-10 mt-[20px]">
 {docData.map((item) => (
 <div onClick={() => handleCardData(item.id)}  className="bg-white flex min-w-[350px] min-h-[200px] gap-[30px]  p-[10px]">
 <div className="mt-[30px]">

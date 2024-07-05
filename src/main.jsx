@@ -16,6 +16,7 @@ import AppointmentPage from './Components/Appointment Page/AppointmentPage';
 import Admin from './Components/Admin/Admin';
 import AppointmentList from './Components/Admin/AppointmentList/AppointmentList';
 import CreateShedule from './Components/Admin/Create Doctor Shedule/CreateShedule';
+import Privat from './Components/Privat Page/Privat';
 
 const router = createBrowserRouter([
   {
@@ -40,32 +41,32 @@ const router = createBrowserRouter([
 
  {
   path : "/profile",
-  element : <UserProfile></UserProfile>
+  element : <Privat><UserProfile></UserProfile></Privat>
  },
 
  {
   path : "/update/:pathname/:_id",
-  element : <UpdateProfile></UpdateProfile>
+  element : <Privat><UpdateProfile></UpdateProfile></Privat>
  },
 
  {
   path : "/booking/:_id",
-  element : <AppointmentPage></AppointmentPage>
+  element : <Privat><AppointmentPage></AppointmentPage></Privat>
  },
 
  {
   path : "/doctor-side",
-  element : <Admin></Admin>,
+  element : <Privat><Admin></Admin></Privat>,
   children : [
 
     {
       path : "/doctor-side",
-      element : <AppointmentList></AppointmentList>
+      element : <Privat><AppointmentList></AppointmentList></Privat>
     },
 
     {
       path : "/doctor-side/shedule",
-      element : <CreateShedule></CreateShedule>
+      element : <Privat><CreateShedule></CreateShedule></Privat>
     }
 
   ]
