@@ -59,17 +59,17 @@ const router = createBrowserRouter([
 
   {
     path : "/doctor-side",
-    element : <Admin></Admin>,
+    element : <Privat><Admin></Admin></Privat>,
     children : [
   
       {
         path : "/doctor-side",
-        element : <AppointmentList></AppointmentList>
+        element : <Privat><AppointmentList></AppointmentList></Privat>
       },
   
       {
         path : "/doctor-side/shedule",
-        element : <CreateShedule></CreateShedule>
+        element : <Privat><CreateShedule></CreateShedule></Privat>
       }
   
     ]
