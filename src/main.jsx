@@ -56,7 +56,7 @@ const router = createBrowserRouter([
 
  {
   path : "/doctor-side",
-  element : <Privat><Admin></Admin></Privat>,
+  element : <Admin></Admin>,
   children : [
 
     {
