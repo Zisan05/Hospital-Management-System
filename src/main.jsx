@@ -64,12 +64,12 @@ const router = createBrowserRouter([
   
       {
         path : "/doctor-side",
-        element : <Privat><AppointmentList></AppointmentList></Privat>
+        element : <AppointmentList></AppointmentList>
       },
   
       {
         path : "/doctor-side/shedule",
-        element : <Privat><CreateShedule></CreateShedule></Privat>
+        element : <CreateShedule></CreateShedule>
       }
   
     ]
